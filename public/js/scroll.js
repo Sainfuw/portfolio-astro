@@ -1,10 +1,10 @@
 function onScroll() {
-  const header = document.getElementById("header")
+  const hero = document.getElementById('hero')
   if (window.scrollY > 0) {
-    header.classList.add("scrolled")
+    hero.classList.add('scrolled')
   } else {
-    header.classList.remove("scrolled")
+    hero.classList.remove('scrolled')
   }
 }
 
-document.addEventListener("scroll", onScroll)
+document.addEventListener('scroll', onScroll)

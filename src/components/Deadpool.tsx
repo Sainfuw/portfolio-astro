@@ -13,7 +13,7 @@ export default function Deadpool(props: any) {
   const { actions } = useAnimations(animations, group)
   const { pointer } = useThree()
 
-  const [currentSection, setCurrentSection] = useState('header')
+  const [currentSection, setCurrentSection] = useState('hero')
   const [currentAnimation, setCurrentAnimation] = useState(0)
 
   useAnimationHandler(animations, actions, currentAnimation)

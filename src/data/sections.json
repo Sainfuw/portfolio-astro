@@ -1,23 +1,23 @@
 [
   {
-    "id": "header",
+    "id": "hero",
     "position": {
-      "x": 0,
+      "x": 3,
       "y": -1.5,
       "z": 0
     },
     "rotation": {
       "x": 0,
-      "y": 0,
+      "y": -1,
       "z": 0
     },
     "animation": 0
   },
   {
-    "id": "experience",
+    "id": "about",
     "position": {
       "x": 4,
-      "y": -0.5,
+      "y": -1.5,
       "z": -5
     },
     "rotation": {
@@ -26,6 +26,34 @@
       "z": -0.5
     },
     "animation": 1
+  },
+  {
+    "id": "blog",
+    "position": {
+      "x": 4,
+      "y": -1.5,
+      "z": -5
+    },
+    "rotation": {
+      "x": 0.4,
+      "y": -1,
+      "z": -0.5
+    },
+    "animation": 1
+  },
+  {
+    "id": "stack",
+    "position": {
+      "x": -4,
+      "y": -1,
+      "z": -5
+    },
+    "rotation": {
+      "x": 0.5,
+      "y": 1,
+      "z": 0.5
+    },
+    "animation": 2
   },
   {
     "id": "projects",
@@ -42,7 +70,7 @@
     "animation": 2
   },
   {
-    "id": "footer",
+    "id": "contact",
     "position": {
       "x": 5,
       "y": -5,
