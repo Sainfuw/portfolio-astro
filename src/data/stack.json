@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Astro",
+    "icon": "astro",
+    "href": "https://astro.build"
+  },
+  {
+    "text": "Javascript",
+    "icon": "javascript",
+    "href": "https://www.javascript.com"
+  },
+  {
+    "text": "Typescript",
+    "icon": "typescript",
+    "href": "https://www.typescriptlang.org"
+  },
+  {
+    "text": "Tailwind",
+    "icon": "tailwind",
+    "href": "https://tailwindcss.com"
+  }
+]
