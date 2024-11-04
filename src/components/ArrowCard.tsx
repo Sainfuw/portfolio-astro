@@ -1,33 +1,31 @@
+import type { IProject } from '@interfaces/projects.interface'
 import { formatDate } from '@lib/utils'
-import type { CollectionEntry } from 'astro:content'
 
 type Props = {
-  entry: CollectionEntry<'blog'> | CollectionEntry<'projects'>
+  entry: IProject
   pill?: boolean
 }
 
 export default function ArrowCard({ entry, pill }: Props) {
   return (
     <a
-      href={`/${entry.collection}/${entry.slug}`}
+      href={`#`}
       className='group p-4 gap-3 flex items-center border rounded-lg hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-colors duration-300 ease-in-out'
     >
       <div className='w-full group-hover:text-black group-hover:dark:text-white blend'>
         <div className='flex flex-wrap items-center gap-2'>
           {pill && (
-            <div className='text-sm capitalize px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25'>
-              {entry.collection === 'blog' ? 'post' : 'project'}
-            </div>
+            <div className='text-sm capitalize px-2 py-0.5 rounded-full border border-black/15 dark:border-white/25'></div>
           )}
-          <div className='text-sm uppercase'>{formatDate(entry.data.date)}</div>
+          <div className='text-sm uppercase'>{formatDate(entry.date)}</div>
         </div>
         <div className='font-semibold mt-3 text-black dark:text-white'>
-          {entry.data.title}
+          {entry.title}
         </div>
 
-        <div className='text-sm line-clamp-2'>{entry.data.summary}</div>
+        <div className='text-sm line-clamp-2'>{entry.summary}</div>
         <ul className='flex flex-wrap mt-2 gap-1'>
-          {entry.data.tags.map((tag: string) => (
+          {entry.tags.map((tag: string) => (
             <li className='text-xs uppercase py-0.5 px-1 rounded bg-black/5 dark:bg-white/20 text-black/75 dark:text-white/75'>
               {tag}
             </li>

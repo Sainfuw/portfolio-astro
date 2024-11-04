@@ -1,22 +1,22 @@
 import ArrowCard from '@components/ArrowCard'
+import type { IProject } from '@interfaces/projects.interface'
 import { cn } from '@lib/utils'
-import type { CollectionEntry } from 'astro:content'
 import { useEffect, useState } from 'react'
 
 type Props = {
   tags: string[]
-  data: CollectionEntry<'projects'>[]
+  data: IProject[]
 }
 
 export default function Projects({ data, tags }: Props) {
   const [filter, setFilter] = useState(new Set<string>())
-  const [projects, setProjects] = useState<CollectionEntry<'projects'>[]>([])
+  const [projects, setProjects] = useState<IProject[]>([])
 
   useEffect(() => {
     setProjects(
       data.filter((entry) =>
         Array.from(filter).every((value) =>
-          entry.data.tags.some(
+          entry.tags.some(
             (tag: string) => tag.toLowerCase() === String(value).toLowerCase()
           )
         )
