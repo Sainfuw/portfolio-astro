@@ -22,7 +22,7 @@ export default function Projects({ data, tags }: Props) {
         )
       )
     )
-  }, [])
+  }, [filter])
 
   function toggleTag(tag: string) {
     setFilter(

@@ -9,15 +9,15 @@ import MeteorShower from "@components/MeteorShower.astro"
 import Scene from "@components/Scene"
 import stack from "@data/stack.json"
 
-const posts = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+// const posts = (await getCollection("blog"))
+//   .filter(post => !post.data.draft)
+//   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+//   .slice(0,3)
 
-const projects = (await getCollection("projects"))
-  .filter(project => !project.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
+// const projects = (await getCollection("projects"))
+//   .filter(project => !project.data.draft)
+//   .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+//   .slice(0,3)
 ---
 
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
@@ -109,11 +109,11 @@ const projects = (await getCollection("projects"))
             </a>
           </div>
           <ul class="space-y-4">
-            {posts.map((post) => (
+            <!-- {posts.map((post) => (
               <li>
                 <ArrowCard entry={post} />
               </li>
-            ))}
+            ))} -->
           </ul>
         </div>
       </section>
@@ -158,11 +158,11 @@ const projects = (await getCollection("projects"))
             </a>
           </div>
           <ul class="space-y-4">
-            {projects.map((project) => (
+            <!-- {projects.map((project) => (
               <li>
                 <ArrowCard entry={project} />
               </li>
-            ))}
+            ))} -->
           </ul>
         </div>
       </section>
